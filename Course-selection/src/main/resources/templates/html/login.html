@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+	<meta charset="utf-8" />
+	<title>课程管理系统</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+<body>
+<div id="bg">
+<!-- 标题 -->
+<header class="header">
+
+</header>
+<!-- 主体 -->
+<main class="main">
+	<!-- 外框 -->
+	<div class="layout-outside">
+		<div class="layout-inside">
+			<h2 class="login-title">登录</h2>
+			<form method="post" action="/login">
+				<p class="row">
+					<img class="login-center-img" src="/img/name.png"/>
+					<input type="text" id="username" name="username" class="field-large"
+					placeholder="请输入用户名" required aria-required="true" autofocus />
+				</p>
+				<p class="row">
+					<img class="login-center-img" src="/img/password.png"/>
+					<input type="password" id="password" name="password" class="field-large"
+					placeholder="请输入密码" required aria-required="true" />
+				</p>
+
+				<p>
+					<img alt="验证码" onclick = "this.src='/checkcode?d='+new Date()*1" src="/checkcode" class="checkcode"/>
+					<input type="text" id="checkCode" name="checkCode" class="field-medium" placeholder="验证码"
+					required aria-required="true" />
+				</p>
+				<th:block th:if="${error}">
+					<h5>
+						<font color="red">密码或验证码错误，或账号不存在</font>
+					</h5>
+				</th:block>
+				<p>
+					<input type="submit" value="登录" class="login-btn" />
+				</p>
+				<p class="register">
+					<a href="/register" rel="external" title="新用户注册">注册</a>
+				</p>
+			</form>
+		</div>
+	</div>
+</main>
+
+	
+</div>
+</body>
+</html>

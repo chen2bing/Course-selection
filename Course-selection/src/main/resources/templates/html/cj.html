@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8" />
+    <title>查看成绩</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header class="student-header">
+    <div class="daohang">
+        <p class="float-left">课程管理系统</p>
+        <a class="float-right" href="/logout"><img src="img/tc.png"> </a>
+    </div>
+</header>
+<main>
+    <table>
+        <thead>
+        <tr>
+            <th>课程代码</th>
+            <th>课程名称</th>
+            <th>授课教师</th>
+            <th>学分</th>
+            <th>成绩</th>
+            <th>绩点</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="o:${scores}">
+            <td th:text="${o.cid}"></td>
+            <td th:text="${o.courseName}"}></td>
+            <td th:text="${o.teacher}"></td>
+            <td th:text="${o.credit}"></td>
+            <td th:text="${o.score}"></td>
+            <td th:text="${o.gpa}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</main>
+
+<script th:inline="javascript">
+    window.onload=function (ev) {
+        var isreflush = [[${reflush}]];
+        if(isreflush !== "no")
+        {
+            window.location.href="/scoreQuery";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+	<meta charset="utf-8" />
+	<title>学生</title>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header class="student-header">
+	<div class="daohang">
+		<div class="float-left">
+			<p>课程管理系统</p>
+		</div>
+		<div class="float-right">
+			<label class="header-label">您好,</label>
+			<label class="header-label" th:text="${name}"></label>
+			<a href="/logout"><img src="img/tc.png"> </a>
+		</div>
+	</div>
+	<h3 class="tishi">请选择以下操作：</h3>
+</header>
+<main>
+	<div class="choices">
+		<ol>
+			<li class="one-choice">
+				<a href="/wanshan" title="查看自己的学籍信息"><img src="img/xx.png"> </a>
+				<p class="choice-font">个人信息</p>
+			</li>
+			<li class="one-choice">
+				<a href="/cj" title="查看自己所有课程的成绩"><img src="img/cj.png"> </a>
+				<p class="choice-font">查看成绩</p>
+			</li>
+			<li class="one-choice">
+				<a href="/xk" title="选择或退掉 专业必修课以及公选课"><img src="img/xk.png"> </a>
+				<p class="choice-font">选课</p>
+			</li>
+			<li class="one-choice">
+				<a href="/wanshan" title="查看自己所有课程详情"><img src="img/kb.png"> </a>
+				<p class="choice-font">所选课程</p>
+			</li>
+			<li class="one-choice">
+				<a href="/wanshan" title="对结束的课程进行评教"><img src="img/pj.png"> </a>
+				<p class="choice-font">评教</p>
+			</li>
+		</ol>
+
+	</div>
+</main>	
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="utf-8" />
+    <title>选课</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header class="student-header">
+    <div class="daohang">
+        <p class="float-left">课程管理系统</p>
+        <a class="float-right" href="/logout"><img src="img/tc.png"> </a>
+    </div>
+    <div class="xk-index">
+        <a class="xk-a" href="/xk">选择课程</a>
+        <label class="xk-label">已选课程</label>
+    </div>
+</header>
+<main>
+    <table>
+        <thead>
+        <tr>
+            <th>课程代码</th>
+            <th>课程名称</th>
+            <th>授课教师</th>
+            <th>课程类型</th>
+            <th>上课时间</th>
+            <th>上课地点</th>
+            <th>学时</th>
+            <th>学分</th>
+            <th>推荐教材</th>
+            <th>退掉</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="o:${courses}">
+            <td th:text="${o.cid}"></td>
+            <td th:text="${o.name}"}></td>
+            <td th:text="${o.teacher}"></td>
+            <td th:text="${o.ctype}"></td>
+            <td th:text="${o.cdate}"></td>
+            <td th:text="${o.place}"></td>
+            <td th:text="${o.howlong}"></td>
+            <td th:text="${o.credit}"></td>
+            <td th:text="${o.book}"></td>
+            <td>
+                <form th:action="@{/tk/{cid}(cid=${o.cid})}">
+                    <input type="submit" value="退掉" class="normal-btn" />
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</main>
+
+<script th:inline="javascript">
+    window.onload=function (ev) {
+        var isreflush = [[${reflush}]];
+        if(isreflush !== "no")
+        {
+            window.location.href="/got";
+        }
+    }
+</script>
+</body>
+</html>

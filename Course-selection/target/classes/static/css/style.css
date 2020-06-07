@@ -1,0 +1,215 @@
+html,body{ 
+	width:100%;
+	height:100%;
+}
+/* 标题 */
+.header{
+	font-family: arial, helvetica, sans-serif;
+	text-align:	center;
+	margin-top: 30px;
+}
+/* 标签 */
+label{
+	cursor: pointer;
+	display: inline-block;
+	padding: 3px 6px;
+	text-align: left;
+	width: 67px;
+	vertical-align: top;
+}
+/* 登录字样*/
+.login-title{
+	margin-left: 100px;
+}
+/*登录界面图片*/
+.login-center-img{
+	width: 20px;
+	height: 20px;
+	margin-top: 5px;
+	margin-right: 10px;
+}
+/* 输入框（三种） */
+.field-large{
+	width: 200px;
+	height: 30px;
+}
+.field-medium{
+	width: 150px;
+	height: 30px;
+}
+.field-small{
+	width: 75px;
+}
+/* 按钮 */
+.login-btn{
+	cursor: pointer;
+	width: 240px;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	background-color: dodgerblue;
+	border-radius: 5px;
+	margin: 0 auto;
+	margin-top: 10px;
+	color: white;
+}
+.hidden{
+	display:none;
+}
+/* 登录界面外框布局 */
+.layout-outside{
+	z-index: 2;
+	position:absolute;
+	width: 350px;
+	border-radius: 5px;
+	height: 450px;
+	background: white;
+	box-shadow: 0px 0px 5px #333;
+	top: 60%;left: 50%;
+	margin-top: -250px;
+	margin-left: -175px;
+	transition: all 1s;
+	-moz-transition: all 1s;
+}
+/* 登录界面内框布局 */
+.layout-inside{
+	/*大小*/
+	width:	400px;
+	height: 300px;
+	/*内边距*/
+	padding-top: 50px;
+	padding-left: 50px;
+}
+/*背景*/
+#bg{
+	width: 100%;
+	height: 100%;
+	background-image: url(../img/bg.jpg);
+	background-position: 50% 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* 注册链接 */
+.register{
+	margin-left: 105px;
+}
+
+/* 导航栏 */
+.daohang{
+	/* 背景色 */
+	background-color: #333399;
+	/* 大小 */
+	width:	100%;
+	height: 70px;
+}
+.float-left{
+	float: left;
+	margin-left: 50px;
+	font-size: 20px;
+	color: #FFFFCC;
+}
+.float-right{
+	float: right;
+	margin-right: 50px;
+	margin-top: 10px;
+}
+
+.header-label{
+	width: 60px;
+	margin-top: 10px;
+	color: #FFFFCC;
+}
+
+.tishi{
+	margin-left: 50px;
+}
+/* 选择链接块*/
+.choices{
+	margin-top: 80px;
+	text-align: center;
+}
+.one-choice{
+	margin-left: 50px;
+	margin-right: 50px;
+	text-align: center;
+}
+.choices li{
+	list-style-type: none;
+	display: inline-block;
+}
+.choice-font{
+	font-weight: bold;
+	font-size: 16px;
+}
+/*完善html*/
+.wanshan{
+	text-align: center;
+}
+/* 验证码 */
+.checkcode{
+	margin-right: 25px;
+	float: left;
+	background-size: cover;
+}
+/* 列表行排列 */
+.hpl li{
+	list-style-type: none;
+	display: inline-block;
+}
+/* 表格 */
+table{
+	width:100%;
+	margin:15px 0;
+	border:0;
+}
+th {
+	background-color:#50C2FF;
+	color:#FFFFCC
+}
+th, td {
+	font-size:0.95em;
+	text-align:center;
+	padding:4px;
+	border-collapse:collapse;
+	border: 1px solid #9bdcfe;
+	border-width:1px 0 1px 0
+}
+tr {
+	border: 1px solid #9bdcfe;
+}
+tr:nth-child(odd){
+	background-color:#c4eafe;
+}
+tr:nth-child(even){
+	background-color:#fdfdfd;
+}
+/* 选课导航 */
+.xk-index{
+	margin-top: 10px;
+	margin-left: 10px;
+	font-size: 18px;
+}
+.xk-label{
+	width: 80px;
+}
+/* 选/退课 按钮*/
+.normal-btn{
+	cursor: pointer;
+	text-align: center;
+	line-height: 30px;
+	background-color: dodgerblue;
+	border-radius: 5px;
+	margin: 0 auto;
+	color: white;
+}
+.abnormal-btn{
+	cursor: pointer;
+	text-align: center;
+	line-height: 30px;
+	background-color: #CC99FF;
+	border-radius: 5px;
+	margin: 0 auto;
+	color: white;
+}
